@@ -15,7 +15,7 @@ class App extends StatelessWidget {
     return const MaterialApp(
       title: 'Demo',
       onGenerateRoute: route.controller,
-      initialRoute: route.articlesScreen,
+      initialRoute: route.landingScreen,
     );
   }
 }

@@ -1,6 +1,7 @@
 class ArticlesEntity {
   ArticlesEntity({
     required this.id,
+    required this.url,
     required this.title,
     required this.source,
     required this.publishedDate,
@@ -9,9 +10,10 @@ class ArticlesEntity {
   });
 
   final int id;
+  final String url;
   final String title;
   final String source;
   final String publishedDate;
   final String summary;
-  final String image;
+  final String? image;
 }

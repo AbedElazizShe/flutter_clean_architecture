@@ -1,8 +1,11 @@
 import 'dart:developer' as developer;
 
 import 'package:dio/dio.dart';
+import 'package:injectable/injectable.dart';
 
-class ApiService {
+@module
+abstract class ApiService {
+  @singleton
   Dio init() {
     Dio _dio = Dio();
     _dio.interceptors.add(ApiInterceptors());

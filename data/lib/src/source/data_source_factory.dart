@@ -1,7 +1,10 @@
+import 'package:injectable/injectable.dart';
+
 import 'data_source.dart';
-import 'local_data_source.dart';
+import 'cache_data_source.dart';
 import 'remote_data_source.dart';
 
+@singleton
 class DataSourceFactory {
   DataSourceFactory({
     required this.remoteDataSource,
@@ -9,7 +12,7 @@ class DataSourceFactory {
   });
 
   final RemoteDataSource remoteDataSource;
-  final LocalDataSource localDataSource;
+  final CacheDataSource localDataSource;
 
   DataSource getDataSource({bool isCached = false, bool force = false}) {
     if (isCached && !force) {
