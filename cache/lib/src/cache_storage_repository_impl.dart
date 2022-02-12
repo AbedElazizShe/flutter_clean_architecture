@@ -18,7 +18,7 @@ class CacheStorageRepositoryImpl implements CacheStorageRepository {
   Future<List<ArticlesEntity>> getArticles(String type) async {
     final String? contents = await dbProvider.fetchArticles(type);
 
-    if (contents == null) return <ArticlesEntity>[];
+    if (contents == null || contents.isEmpty) return <ArticlesEntity>[];
 
     return (json.decode(contents) as List)
         .map((i) => articlesEntityMapper.mapFromModel(ArticleModel.fromJson(i)))

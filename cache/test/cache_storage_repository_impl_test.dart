@@ -1,4 +1,4 @@
-import 'package:cache/cache.dart';
+import 'package:cache/src/cache_storage_repository_impl.dart';
 import 'package:cache/src/db_provider.dart';
 import 'package:cache/src/mapper/articles_entity_mapper.dart';
 import 'package:flutter_test/flutter_test.dart';

@@ -2,7 +2,9 @@ import 'package:data/data.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:remote/remote.dart';
+import 'package:remote/src/api/articles_service.dart';
+import 'package:remote/src/articles_remote_repository_impl.dart';
+import 'package:remote/src/mapper/articles_entity_mapper.dart';
 import 'package:remote/src/models/article/articles_response_model.dart';
 
 import '../mock/mock_articles_model.dart';
@@ -41,36 +43,36 @@ void main() {
   });
 
   test('should get list of ArticlesEntity when fetching most viewed articles',
-          () async {
-        final ArticlesResponseModel articlesResponseModel =
-            mockArticlesResponseModel;
-        when(articlesService.getMostViewedArticles())
-            .thenAnswer((_) async => articlesResponseModel);
-        when(articlesEntityMapper.mapFromModel(articlesResponseModel.results[0]))
-            .thenReturn(mockArticlesEntity);
+      () async {
+    final ArticlesResponseModel articlesResponseModel =
+        mockArticlesResponseModel;
+    when(articlesService.getMostViewedArticles())
+        .thenAnswer((_) async => articlesResponseModel);
+    when(articlesEntityMapper.mapFromModel(articlesResponseModel.results[0]))
+        .thenReturn(mockArticlesEntity);
 
-        final List<ArticlesEntity> articlesEntity =
+    final List<ArticlesEntity> articlesEntity =
         await articlesRemoteRepositoryImpl.getMostViewedArticles();
-        expect(articlesEntity, isNotNull);
-        expect(articlesEntity.length, same(1));
+    expect(articlesEntity, isNotNull);
+    expect(articlesEntity.length, same(1));
 
-        verify(articlesService.getMostViewedArticles()).called(1);
-      });
+    verify(articlesService.getMostViewedArticles()).called(1);
+  });
 
   test('should get list of ArticlesEntity when fetching most shared articles',
-          () async {
-        final ArticlesResponseModel articlesResponseModel =
-            mockArticlesResponseModel;
-        when(articlesService.getMostSharedArticles())
-            .thenAnswer((_) async => articlesResponseModel);
-        when(articlesEntityMapper.mapFromModel(articlesResponseModel.results[0]))
-            .thenReturn(mockArticlesEntity);
+      () async {
+    final ArticlesResponseModel articlesResponseModel =
+        mockArticlesResponseModel;
+    when(articlesService.getMostSharedArticles())
+        .thenAnswer((_) async => articlesResponseModel);
+    when(articlesEntityMapper.mapFromModel(articlesResponseModel.results[0]))
+        .thenReturn(mockArticlesEntity);
 
-        final List<ArticlesEntity> articlesEntity =
+    final List<ArticlesEntity> articlesEntity =
         await articlesRemoteRepositoryImpl.getMostSharedArticles();
-        expect(articlesEntity, isNotNull);
-        expect(articlesEntity.length, same(1));
+    expect(articlesEntity, isNotNull);
+    expect(articlesEntity.length, same(1));
 
-        verify(articlesService.getMostSharedArticles()).called(1);
-      });
+    verify(articlesService.getMostSharedArticles()).called(1);
+  });
 }
