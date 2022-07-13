@@ -18,8 +18,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   injectable_generator: ^1.5.3
-  build_runner: ^2.1.7
-  flutter_lints: ^1.0.4
-  mockito: ^5.0.17
+  build_runner: ^2.2.0
+  flutter_lints: ^2.0.1
+  mockito: ^5.2.0
 
 flutter:

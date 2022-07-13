@@ -10,12 +10,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.4
+  cupertino_icons: ^1.0.5
   equatable: ^2.0.3
   flutter_bloc: ^8.0.1
   get_it: ^7.2.0
   injectable: ^1.5.3
-  url_launcher: ^6.0.18
+  url_launcher: ^6.1.5
   remote:
     path: ./remote/
   cache:
@@ -29,9 +29,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   injectable_generator: ^1.5.2
-  build_runner: ^2.1.7
-  bloc_test: ^9.0.2
-  flutter_lints: ^1.0.4
+  build_runner: ^2.2.0
+  bloc_test: ^9.0.3
+  flutter_lints: ^2.0.1
 
 flutter:
   uses-material-design: true

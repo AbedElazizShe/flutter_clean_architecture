@@ -1,6 +1,6 @@
 import 'dart:developer' as logger;
 
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 /// An observer for blocs and cubits state change
 class CubitObserver extends BlocObserver {

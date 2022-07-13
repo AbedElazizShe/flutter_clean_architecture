@@ -1,5 +1,5 @@
-import 'package:bloc/bloc.dart';
 import 'package:domain/domain.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_clean_architecture/core/enums.dart';
 import 'package:get_it/get_it.dart';
 

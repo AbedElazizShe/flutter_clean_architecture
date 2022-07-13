@@ -14,17 +14,17 @@ dependencies:
     path: ../data/
   injectable: ^1.5.3
   drift: ^1.3.0
-  sqlite3_flutter_libs: ^0.5.3
-  path_provider: ^2.0.8
+  sqlite3_flutter_libs: ^0.5.8
+  path_provider: ^2.0.11
   path: ^1.8.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   injectable_generator: ^1.5.3
-  build_runner: ^2.1.7
+  build_runner: ^2.2.0
   drift_dev: ^1.3.0
-  flutter_lints: ^1.0.4
-  mockito: ^5.0.17
+  flutter_lints: ^2.0.1
+  mockito: ^5.2.0
 
 flutter:

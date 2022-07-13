@@ -66,7 +66,7 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
                                       'assets/placeholder.jpg',
                                       width: 60,
                                       height: 75,
-                                fit: BoxFit.cover,
+                                      fit: BoxFit.cover,
                                     )),
                           title: Padding(
                             padding: const EdgeInsets.only(bottom: 8),
@@ -116,6 +116,6 @@ class _ArticlesScreenState extends State<ArticlesScreen> {
   }
 
   Future<void> _launchURL(String url) async {
-    if (!await launch(url)) throw 'Could not launch $url';
+    if (!await launchUrl(Uri.parse(url))) throw 'Could not launch $url';
   }
 }
