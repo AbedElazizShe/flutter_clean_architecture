@@ -6,7 +6,7 @@ part of 'demo_db.dart';
 // MoorGenerator
 // **************************************************************************
 
-// ignore_for_file: unnecessary_brace_in_string_interps, unnecessary_this
+// ignore_for_file: type=lint
 class Articles extends DataClass implements Insertable<Articles> {
   final String content;
   final String type;
@@ -151,9 +151,10 @@ class ArticlesEntityCompanion extends UpdateCompanion<Articles> {
 
 class $ArticlesEntityTable extends ArticlesEntity
     with TableInfo<$ArticlesEntityTable, Articles> {
-  final GeneratedDatabase _db;
+  @override
+  final GeneratedDatabase attachedDatabase;
   final String? _alias;
-  $ArticlesEntityTable(this._db, [this._alias]);
+  $ArticlesEntityTable(this.attachedDatabase, [this._alias]);
   final VerificationMeta _contentMeta = const VerificationMeta('content');
   @override
   late final GeneratedColumn<String?> content = GeneratedColumn<String?>(
@@ -211,7 +212,7 @@ class $ArticlesEntityTable extends ArticlesEntity
 
   @override
   $ArticlesEntityTable createAlias(String alias) {
-    return $ArticlesEntityTable(_db, alias);
+    return $ArticlesEntityTable(attachedDatabase, alias);
   }
 }
 

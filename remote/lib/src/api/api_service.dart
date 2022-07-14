@@ -1,6 +1,7 @@
 import 'dart:developer' as developer;
 
 import 'package:dio/dio.dart';
+import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 
 @module
@@ -9,7 +10,7 @@ abstract class ApiService {
   Dio init() {
     Dio _dio = Dio();
     _dio.interceptors.add(ApiInterceptors());
-    _dio.options.baseUrl = "https://api.nytimes.com/svc/";
+    _dio.options.baseUrl = GetIt.instance.get<String>(instanceName: 'endpoint');
     return _dio;
   }
 }

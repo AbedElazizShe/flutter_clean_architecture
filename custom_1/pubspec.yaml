@@ -1,0 +1,30 @@
+name: custom_1
+description: A Custom Flutter Project
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.17.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.5
+  core:
+    path: ../core/
+  flutter_bloc: ^8.0.1
+  get_localization: ^3.0.0
+
+dependency_overrides:
+  config:
+    path: ../config
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.1
+
+flutter:
+  uses-material-design: true

@@ -14,9 +14,7 @@ class EndpointProvider {
   Future<ArticlesResponseModel> getMostEmailedArticles() async {
     try {
       final response = await _dio.get('mostpopular/v2/emailed/7.json',
-          queryParameters: <String, String>{
-            'api-key': 'ADD-YOUR-KEY'
-          });
+          queryParameters: <String, String>{'api-key': 'ADD-YOUR-KEY'});
 
       return ArticlesResponseModel.fromJson(json.decode(response.toString()));
     } on DioError catch (ex) {
@@ -28,9 +26,7 @@ class EndpointProvider {
   Future<ArticlesResponseModel> getMostViewedArticles() async {
     try {
       final response = await _dio.get('mostpopular/v2/viewed/7.json',
-          queryParameters: <String, String>{
-            'api-key': 'ADD-YOUR-KEY'
-          });
+          queryParameters: <String, String>{'api-key': 'ADD-YOUR-KEY'});
 
       return ArticlesResponseModel.fromJson(json.decode(response.toString()));
     } on DioError catch (ex) {
@@ -42,9 +38,7 @@ class EndpointProvider {
   Future<ArticlesResponseModel> getMostSharedArticles() async {
     try {
       final response = await _dio.get('mostpopular/v2/shared/7.json',
-          queryParameters: <String, String>{
-            'api-key': 'ADD-YOUR-KEY'
-          });
+          queryParameters: <String, String>{'api-key': 'ADD-YOUR-KEY'});
 
       return ArticlesResponseModel.fromJson(json.decode(response.toString()));
     } on DioError catch (ex) {
