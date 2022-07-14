@@ -7,4 +7,5 @@ A Flutter project to demonstrate clean architecture implementation and how to bu
 
 ## Demo
 ![Demo](/pictures/flutter_demo.gif)
+
 ![Customisation Demo](/pictures/flutter_customisation_demo.gif)
