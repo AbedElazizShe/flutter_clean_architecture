@@ -5,5 +5,5 @@ import 'injector.config.dart';
 
 @InjectableInit(initializerName: r'$initCacheGetIt')
 Future<void> configureCacheDependencies(GetIt getIt) async {
-  $initCacheGetIt(getIt);
+  getIt.$initCacheGetIt();
 }

@@ -5,5 +5,5 @@ import 'injector.config.dart';
 
 @InjectableInit(initializerName: r'$initDomainGetIt')
 Future<void> configureDomainDependencies(GetIt getIt) async {
-  $initDomainGetIt(getIt);
+  getIt.$initDomainGetIt();
 }

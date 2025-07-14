@@ -5,5 +5,5 @@ import 'injector.config.dart';
 
 @InjectableInit(initializerName: r'$initDataGetIt')
 Future<void> configureDataDependencies(GetIt getIt) async {
-  $initDataGetIt(getIt);
+  getIt.$initDataGetIt();
 }

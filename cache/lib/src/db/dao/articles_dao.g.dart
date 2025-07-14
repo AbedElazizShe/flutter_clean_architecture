@@ -2,10 +2,7 @@
 
 part of 'articles_dao.dart';
 
-// **************************************************************************
-// DaoGenerator
-// **************************************************************************
-
+// ignore_for_file: type=lint
 mixin _$ArticlesDaoMixin on DatabaseAccessor<DemoDB> {
   $ArticlesEntityTable get articlesEntity => attachedDatabase.articlesEntity;
 }

@@ -5,5 +5,5 @@ import 'injector.config.dart';
 
 @InjectableInit(initializerName: r'$initRemoteGetIt')
 Future<void> configureRemoteDependencies(GetIt getIt) async {
-  $initRemoteGetIt(getIt);
+  getIt.$initRemoteGetIt();
 }

@@ -15,5 +15,5 @@ Future<void> configureDependencies() async {
   await configureRemoteDependencies(getIt);
   await configureDataDependencies(getIt);
   await configureDomainDependencies(getIt);
-  $initGetIt(getIt);
+  getIt.$initGetIt();
 }
